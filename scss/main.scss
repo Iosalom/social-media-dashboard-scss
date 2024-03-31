@@ -141,10 +141,6 @@ main {
   }
 }
 
-.attribution {
-  color: col('white-txt');
-}
-
 @mixin theme($light-theme: true) {
   @if $light-theme {
     main {
@@ -201,15 +197,6 @@ main {
         .second-portion {
           @extend .first-portion;
         }
-      }
-    }
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-      color: col('very-dark-blue-txt');
-
-      a {
-        color: hsl(228, 45%, 44%);
       }
     }
   }
