@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="dist/css/main.css" />
+
+    <title>Frontend Mentor | Social media dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body id="body">
+    <!-- this main is responible centering this div -->
+    <main>
+      <!-- in this div I will have content of this page -->
+      <div class="content-div">
+        <div class="top-nav-div">
+          <div class="main-heading-div">
+            <h1>
+              Social Media <br class="hidden-br" />
+              Dashboard
+            </h1>
+            <p>Total Followers: 23,004</p>
+          </div>
+
+          <hr class="hidden" />
+
+          <div class="toggle-theme-btn" id="toggle-btn">
+            <p class="dark-theme-text">Dark Mode</p>
+            <input type="checkbox" id="check" />
+            <label for="check" class="button" id="toggle-label-btn"></label>
+          </div>
+        </div>
+        <!-- End top-nav-div -->
+
+        <div class="dashboard-top-overview">
+          <div class="more-pain-with-flex">
+            <div class="struggle-of-flexbox">
+              <div class="card fb">
+                <p class="username-paragr">
+                  <img src="images/icon-facebook.svg" alt="" />
+                  <span class="username">@nathanf</span>
+                </p>
+                <p class="num-followers">1987</p>
+                <p class="txt-followers">Followers</p>
+                <p class="total-result-paragr">
+                  <img src="images/icon-up.svg" alt="up-arrow" /><span class="green">12 Today</span>
+                </p>
+              </div>
+              <div class="card twitter">
+                <p class="username-paragr">
+                  <img src="images/icon-twitter.svg" alt="" />
+                  <span class="username">@nathanf</span>
+                </p>
+                <p class="num-followers">1044</p>
+                <p class="txt-followers">Followers</p>
+                <p class="total-result-paragr">
+                  <img src="images/icon-up.svg" alt="up-arrow" /><span class="green">99 Today</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="struggle-of-flexbox">
+              <div class="instagram-special">
+                <div class="card intagram">
+                  <p class="username-paragr">
+                    <img src="images/icon-instagram.svg" alt="" /><span class="username"
+                      >@realnathanf</span
+                    >
+                  </p>
+                  <p class="num-followers">11k</p>
+                  <p class="txt-followers">Followers</p>
+                  <p class="total-result-paragr">
+                    <img src="images/icon-up.svg" alt="up-arrow" /><span class="green"
+                      >1099 Today</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="card yt">
+                <p class="username-paragr">
+                  <img src="images/icon-youtube.svg" alt="" /><span class="username"
+                    >Nathan F.</span
+                  >
+                </p>
+                <p class="num-followers">8239</p>
+                <p class="txt-followers">Subscribers</p>
+                <p class="total-result-paragr">
+                  <img src="images/icon-down.svg" alt="" /><span class="red">144 Today</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="heading-2">
+        <h2>Overview - Today</h2>
+      </div>
+      <div class="wrapper">
+        <div class="first-portion">
+          <div class="bottom-card">
+            <p class="title-component">
+              <span>Page Views</span><img src="images/icon-facebook.svg" alt="" />
+            </p>
+            <h3>
+              <span class="n-num-gained">87</span>
+              <span class="percentage-gained"><img src="images/icon-up.svg" alt="" />3%</span>
+            </h3>
+          </div>
+          <div class="bottom-card">
+            <p class="title-component">
+              <span>Likes</span><img src="images/icon-facebook.svg" alt="" />
+            </p>
+            <h3>
+              <span class="n-num-gained">52</span
+              ><span class="percentage-gained red"
+                ><img src="images/icon-down.svg" alt="" />2%</span
+              >
+            </h3>
+          </div>
+          <div class="bottom-card">
+            <p class="title-component">
+              <span>Likes</span><img src="images/icon-instagram.svg" alt="" />
+            </p>
+            <h3>
+              <span class="n-num-gained">5462</span
+              ><span class="percentage-gained"><img src="images/icon-up.svg" alt="" />2257%</span>
+            </h3>
+          </div>
+          <div class="bottom-card">
+            <p class="title-component">
+              <span>Page Views</span><img src="images/icon-instagram.svg" alt="" />
+            </p>
+            <h3>
+              <span class="n-num-gained">52k</span
+              ><span class="percentage-gained"><img src="images/icon-up.svg" alt="" />1375%</span>
+            </h3>
+          </div>
+        </div>
+        <!--  -->
+        <div class="second-portion">
+          <div class="bottom-card">
+            <p class="title-component">
+              <span>Retweets</span><img src="images/icon-twitter.svg" alt="" />
+            </p>
+            <h3>
+              <span class="n-num-gained">117</span
+              ><span class="percentage-gained"><img src="images/icon-up.svg" alt="" />303%</span>
+            </h3>
+          </div>
+          <div class="bottom-card">
+            <p class="title-component">
+              <span>Likes</span><img src="images/icon-twitter.svg" alt="" />
+            </p>
+            <h3>
+              <span class="n-num-gained">507</span
+              ><span class="percentage-gained"><img src="images/icon-up.svg" alt="" />553%</span>
+            </h3>
+          </div>
+          <div class="bottom-card">
+            <p class="title-component">
+              <span>Likes</span><img src="images/icon-youtube.svg" alt="" />
+            </p>
+            <h3>
+              <span class="n-num-gained">107</span
+              ><span class="percentage-gained red"
+                ><img src="images/icon-down.svg" alt="" />19</span
+              >
+            </h3>
+          </div>
+          <div class="bottom-card">
+            <p class="title-component">
+              <span>Total Views</span><img src="images/icon-youtube.svg" alt="" />
+            </p>
+            <h3>
+              <span class="n-num-gained">1407</span
+              ><span class="percentage-gained red"
+                ><img src="images/icon-down.svg" alt="" />12%</span
+              >
+            </h3>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Iosebi</a>.
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

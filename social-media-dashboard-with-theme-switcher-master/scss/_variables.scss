@@ -1,0 +1,167 @@
+$allColor: (
+  // ## Colors
+  // ### Primary
+  'lime-green': hsl(163, 72%, 41%),
+  'bright-red': hsl(356, 69%, 56%),
+  // Social media
+  'facebook': hsl(208, 92%, 53%),
+  'twitter': hsl(203, 89%, 53%),
+  'instagram': linear-gradient(to top right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)),
+  // 'instagram': linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%)),
+  'youtube': hsl(348, 97%, 39%),
+  // #### Dark Theme
+  // Toggle btn
+  'toggle': linear-gradient(to top right, hsl(210, 78%, 56%), hsl(146, 68%, 55%)),
+  // #### Light Theme
+  'toggle-circle': hsl(230, 22%, 74%),
+  // ### Neutral
+  // #### Dark Theme
+  'very-dark-blue-bg': hsl(230, 17%, 14%),
+  'very-dark-blue-top-bg-pattern': hsl(232, 19%, 15%),
+  'dark-desaturated-blue-card-bg': hsl(228, 28%, 20%),
+  'desaturated-blue-txt': hsl(228, 34%, 66%),
+  'white-txt': hsl(0, 0%, 100%),
+  // #### Light Theme
+  'white-bg': hsl(0, 0%, 100%),
+  'very-pale-blue-to-bg-pattern': hsl(225, 100%, 98%),
+  'light-grayish-blue-card-bg': hsl(227, 47%, 96%),
+  'dark-grayish-blue-txt': hsl(228, 12%, 44%),
+  'very-dark-blue-txt': hsl(230, 17%, 14%)
+);
+
+@function col($val-col) {
+  @return map-get($allColor, $val-col);
+}
+
+$card-headings-font-size: 14px;
+
+$weights: (
+  'reg': 400,
+  'bold': 700,
+);
+
+$tablet-view: 1420px;
+$mobile-view: 720px;
+$small-screen-view: 472px;
+
+@function weight($val) {
+  @return map-get($weights, $val);
+}
+
+@mixin centerContent() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin contentDirection($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin sameProperties($bg-col, $username-txt-col, $num-followers-col, $txt-followers-col) {
+  // width: 300px;
+  // height: 300px;
+  padding: 30px 80px;
+  @include contentDirection(column);
+  background: $bg-col;
+  cursor: pointer;
+  .username-paragr {
+    margin: 20px 0;
+    @include centerContent();
+    gap: 10px;
+  }
+  .username {
+    color: $username-txt-col;
+    font-weight: weight('bold');
+  }
+  .num-followers {
+    color: $num-followers-col;
+    font-size: 60px;
+    font-weight: weight('bold');
+  }
+  .txt-followers {
+    color: $txt-followers-col;
+    font-size: 20px;
+    font-weight: weight('reg');
+    letter-spacing: 5px;
+  }
+  .green {
+    color: col('lime-green');
+    font-weight: weight('bold');
+  }
+  .red {
+    color: col('bright-red');
+    font-weight: weight('bold');
+  }
+  .total-result-paragr {
+    margin: 30px 0 5px;
+    @include centerContent();
+    gap: 5px;
+  }
+
+  &:hover {
+    background: lighten($bg-col, 10%);
+  }
+}
+
+@mixin bottomCard($bg-col, $title-component-txt, $num-gained-txt) {
+  .bottom-card {
+    min-width: 300px;
+    background: $bg-col;
+    padding: 30px 30px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: lighten($bg-col, 10%);
+    }
+
+    .title-component {
+      @include centerContent();
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      & span {
+        color: $title-component-txt;
+        font-weight: weight('bold');
+      }
+    }
+
+    h3 {
+      @include centerContent();
+      text-align: center;
+      justify-content: space-between;
+
+      & .n-num-gained {
+        font-size: 32px;
+        color: $num-gained-txt;
+      }
+
+      & .percentage-gained {
+        @include centerContent();
+        text-align: center;
+        margin-top: 10px;
+        color: col('lime-green');
+        font-size: $card-headings-font-size;
+
+        img {
+          position: relative;
+          right: 5px;
+        }
+      }
+
+      & .red {
+        color: col('bright-red');
+      }
+    }
+  }
+}
+
+@mixin portionMixin {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
